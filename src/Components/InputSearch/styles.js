@@ -12,6 +12,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.ICE};
     background: transparent;
     border: none;
+    flex: 1;
   }
 
   form button {

@@ -2,7 +2,7 @@ import { Container, Logo, Search } from "./styles"
 import { InputSearch } from "../InputSearch"
 import logo from "../../assets/logo.svg"
 
-export function Header(){
+export function Navbar(){
     return(
         <Container>
             <Logo>

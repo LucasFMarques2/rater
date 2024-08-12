@@ -13,6 +13,7 @@ export default{
         SILVER_100: "#6E6E6E",
         SILVER_200: "#7C7C7C",
         SILVER_300: "#B4B4B4",
+        SILVER_400: "rgba(66, 92, 94, .8);",
 
         ICE: "#EEEEEE",
     }
