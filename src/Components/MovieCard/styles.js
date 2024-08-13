@@ -1,8 +1,11 @@
-// MovieCard.styles.js
 import styled from "styled-components";
 
 
 export const Container = styled.li`
+  * {
+    position: relative;
+    z-index: 2;
+  }
   position: relative;
   background-image: url(${props => props.$backgroundImage}) ;
   background-size: cover;
@@ -28,24 +31,22 @@ export const Container = styled.li`
     z-index: 1;
   }
 
-  * {
-    position: relative;
-    z-index: 2;
-  }
 
   span {
   padding: .5rem;
   border-radius: 10px;
-  background: ${({theme})=>theme.COLORS.SILVER_400};
   display: inline-flex; 
   align-items: center; 
-
+  
   font-size: 1.3rem;
   font-weight: bold;
+}
 
-  position: absolute; 
-  top: 1.6rem; 
-  left: 1.6rem;
+span p{
+  font-weight: 400;
+  margin-left: .2rem;
+  color: ${({theme}) => theme.COLORS.SILVER_300};
+  font-size: 1.4rem;
 }
 
 span svg {
@@ -53,14 +54,12 @@ span svg {
   margin-right: .3em;
 }
 
-  h3 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
 
   .description {
-    font-size: 1rem;
     margin-bottom: 8px;
+    font-size: 1.3rem;
+    text-align: justify;
+    margin-bottom: 2rem;
   }
 
   img{

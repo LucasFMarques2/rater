@@ -1,4 +1,3 @@
-// Home.js
 import { Container, New, Header, News } from "./styles";
 import { Navbar } from "../../Components/Navbar";
 import { useNewMovie } from "../../hooks/useNewMovie";
@@ -19,15 +18,21 @@ export function Home() {
                 <MovieCard
                   key={movie.id}
                   id={movie.id}
+                  title={movie.title}
                   votes={movie.vote_average}
                   destaque={banner}
-                  title={movie.title}
                   description={movie.overview}
                   poster_path={movie.poster_path}
-                  isFirst={true} 
+                  vote_count={movie.vote_count}
+                  runtime={movie.runtime}
+                  genres={movie.genres}
+                  release_date={movie.release_date}
+                  trailerKey={movie.trailerKey}
+                  isFirst={true}
                 />
               );
             }
+            return null;
           })}
         </New>
         <News>
@@ -42,9 +47,11 @@ export function Home() {
                     votes={movie.vote_average}
                     title={movie.title}
                     poster_path={movie.poster_path}
+                    trailerKey={movie.trailerKey}
                   />
                 );
               }
+              return null;
             })}
           </ul>
         </News>
