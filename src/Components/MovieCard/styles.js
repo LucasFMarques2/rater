@@ -1,71 +1,106 @@
 import styled from "styled-components";
 
-
-export const Container = styled.li`
+export const Container = styled.div`
   * {
     position: relative;
-    z-index: 2;
   }
   position: relative;
-  background-image: url(${props => props.$backgroundImage}) ;
+  background-image: url(${(props) => props.$backgroundImage});
   background-size: cover;
   background-position: center;
-  width: 100%; 
-  height: 100vh; 
-  border-radius: 12px;
   overflow: hidden;
-  padding: 1.6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  color: ${({theme}) => theme.COLORS.ICE};
+  width: 100%;
+  border-radius: 12px;
+  padding: 1rem;
+  color: ${({ theme }) => theme.COLORS.ICE};
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 0;
   }
-
-
-  span {
-  padding: .5rem;
-  border-radius: 10px;
-  display: inline-flex; 
-  align-items: center; 
-  
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-span p{
-  font-weight: 400;
-  margin-left: .2rem;
-  color: ${({theme}) => theme.COLORS.SILVER_300};
-  font-size: 1.4rem;
-}
-
-span svg {
-  color: gold;
-  margin-right: .3em;
-}
-
 
   .description {
-    margin-bottom: 8px;
-    font-size: 1.3rem;
-    text-align: justify;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    line-height: 1.5;
+    max-height: 4.5em;
+    font-size: 1rem;
+  }
+
+  #destaque {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 40vh;
+  }
+
+  #destaque p{
     margin-bottom: 2rem;
+    color: ${({theme}) => theme.COLORS.SILVER_300};
   }
 
-  img{
-    width: 10rem;
-    margin-bottom: 1rem;
+  #destaque div p{
+    display: none;
   }
 
+  span img{
+    margin-right: 10px;
+  }
+
+  span{
+    display: flex;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  span .starRatin{
+    position: static;
+  }
+
+  .starRatin{
+    display: flex;
+    align-items: center;
+    width: 6rem;
+
+    border-radius: 10px;
+    padding: .4rem;
+
+    font-weight: bold;
+
+    background-color: ${({theme}) => theme.COLORS.SILVER_400};
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+ .starRatin svg{
+    color: gold;
+    margin-right: .4rem;
+  }
+
+  #movieList{
+    height: 40vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 1rem;
+  }
+
+  #movieList h3{
+    font-size: 1.5rem;
+  }
 
 `;
