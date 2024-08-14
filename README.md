@@ -17,7 +17,7 @@ Este projeto foi realizado como parte de um desafio para a criação de uma apli
 
 ## Deploy
 
-A aplicação está disponível em: [Notes](https://rater-green.vercel.app/)
+A aplicação está disponível em: [Rater](https://rater-green.vercel.app/)
 
 ## Instruções para Execução Local
 
