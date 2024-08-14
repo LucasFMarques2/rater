@@ -24,7 +24,7 @@ export const Container = styled.div`
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 0;
   }
-  height: 30vh;
+  height: 20vh;
 
   display: flex;
   h1{

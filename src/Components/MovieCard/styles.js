@@ -45,7 +45,7 @@ export const Container = styled.div`
 
   #destaque p{
     margin-bottom: 2rem;
-    color: ${({theme}) => theme.COLORS.SILVER_300};
+    color: ${({ theme }) => theme.COLORS.SILVER_300};
   }
 
   #destaque div p{
@@ -78,7 +78,7 @@ export const Container = styled.div`
 
     font-weight: bold;
 
-    background-color: ${({theme}) => theme.COLORS.SILVER_400};
+    background-color: ${({ theme }) => theme.COLORS.SILVER_400};
 
     position: absolute;
     top: 0;
@@ -102,5 +102,4 @@ export const Container = styled.div`
   #movieList h3{
     font-size: 1.5rem;
   }
-
-`;
+`

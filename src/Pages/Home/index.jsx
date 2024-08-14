@@ -2,7 +2,7 @@ import { Container } from "./styles";
 import { Navbar } from "../../Components/Navbar";
 import { Header } from "../../Components/Header";
 import { ShowActors } from "../../Components/ShowActors";
-
+import { NewMovies } from "../../Components/NewMovies";
 
 
 export function Home() {
@@ -12,6 +12,7 @@ export function Home() {
     <Container>
       <Navbar />
       <Header />
+      <NewMovies/>
       <ShowActors/>
     </Container>
   );

@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { api } from "../services/api";
 
-export function usePopular() {
+export function useNewMovies() {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        async function fetchMovies() {
+        async function fetchNewMovies() {
             try {
-                const response = await api.get('/movie/popular');
-                
+                const response = await api.get('/movie/now_playing');
+
                 const moviePromises = response.data.results.map(async (movie) => {
                     try {
                         const detailsResponse = await api.get(`/movie/${movie.id}`, {
@@ -40,11 +40,11 @@ export function usePopular() {
                 const moviesWithDetailsAndTrailers = await Promise.all(moviePromises);
                 setMovies(moviesWithDetailsAndTrailers);
             } catch (error) {
-                console.error("Erro ao buscar filmes:", error);
+                console.error("Erro ao buscar lançamentos:", error);
             }
         }
 
-        fetchMovies();
+        fetchNewMovies();
     }, []);
 
     return movies;
